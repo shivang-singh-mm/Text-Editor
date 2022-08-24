@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="./marked.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<!-- css exporting file....
+........
+.........-->
+<link rel="stylesheet" href="edit.css">
+
+
+
+
+<script>
+    function textEdit() {
+        document.getElementById("preview").innerHTML= marked(document.getElementById('editor').value);
+    }
+</script>
+<!-- HTML main file..
+..-->
+
+<script>
+  
+  function setDefault(){
+    let pretext = `
+    # This is my project
+    ## My name is Sivang Singh
+    ### I have used JSX, HTML , JavaScript and CSS in tis one 
+    ### I have used markdown library to create this previewer with effects
+    My Gmail *shivangsingh2240@gmal.com* 
+    `;
+    document.getElementById("editor").value = pretext
+    document.getElementById('preview').innerHTML = marked(pretext)  
+}
+// window.onload = setDefault;
+</script>
+
+
+<body onload="setDeafult()"><script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+   <div class="container-fluid" style="text-align: center"><h1>markdown previewer</h1></div>
+        <div class="row">
+            <div class="col-6 editing"><textarea id="editor" class="setup" rows="13" cols="60" onkeyup="textEdit()">
+# This is my project
+## My name is Sivang Singh
+### I have used JSX, HTML , JavaScript and CSS in tis one 
+### I have used markdown library to create this previewer with effects
+My Gmail *shivangsingh2240@gmal.com* 
+            </textarea></div>
+            <div class="col-6 get" id="preview"></div>
+            <p style="margin: 4px auto auto 15px"><b>Type a letter</b></p>
+        </div>
+</body></html>

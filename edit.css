@@ -1,0 +1,28 @@
+.editing{
+    background-color:rgba(99, 137, 21, 0.251);
+    padding: auto 100px auto 100px;
+    display: inline-block;
+    left: auto;
+    right:auto;
+    height: fit-content;
+}
+
+.setup{
+    margin: 50px 50px 100px 50px;
+}
+
+.text-preview{
+    border-style: outset;
+}
+
+.get{
+    background-color: black;
+    display:inline-block ;
+    border-top: 27px;
+    border-left: 13px;
+    border-right: 20px;
+    border-bottom: 8px;
+    border-color: rgba(0, 150, 0, 0.402);
+    border-style :solid;
+    color: white;
+}
